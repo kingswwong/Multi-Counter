@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import CounterGroup from '@/components/CounterGroup'
+import MultiCounter from '@/components/MultiCounter'
 
 Vue.use(Router)
 
@@ -8,8 +8,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'CounterGroup',
-      component: CounterGroup
+      name: 'MultiCounter',
+      component: MultiCounter
     }
   ]
 })
