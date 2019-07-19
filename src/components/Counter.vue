@@ -17,10 +17,12 @@
     methods: {
       add(){
         this.value++;
+        this.$emit('calculateToCounter',1)
       },
       del(){
         this.value--;
-      }
+        this.$emit('calculateToCounter',-1)
+      },
     }
   }
 </script>
