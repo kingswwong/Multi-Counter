@@ -17,11 +17,11 @@
     methods: {
       add(){
         this.value++;
-        this.$emit('calculateToCounter',1)
+        this.$store.commit('increment')
       },
       del(){
         this.value--;
-        this.$emit('calculateToCounter',-1)
+        this.$store.commit('decrement')
       },
     }
   }

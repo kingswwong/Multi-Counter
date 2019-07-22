@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Counter v-for="n in count" @calculateToCounter="calculate"></Counter>
+    <Counter v-for="n in count" ></Counter>
   </div>
 </template>
 
@@ -11,19 +11,10 @@
     components: {
       Counter
     },
-    props:{
-      count:Number
-    },
-    data() {
-      return {
-        counterSum: 0
-      }
-    },
-    methods:{
-      calculate(number){
-        this.counterSum += number
-        this.$emit('transmit',this.counterSum)
-      }
+    computed:{
+     count(){
+       return this.$store.state.count
+     }
     }
   }
 </script>

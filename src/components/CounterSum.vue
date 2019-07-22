@@ -1,16 +1,18 @@
 <template>
-    <div>
-      <span>{{countSum}}</span>
-    </div>
+  <div>
+    <span>{{countSum}}</span>
+  </div>
 </template>
 
 <script>
-    export default {
-        name: "CounterSum",
-      props:{
-        countSum: Number
+  export default {
+    name: "CounterSum",
+    computed: {
+      countSum(){
+        return this.$store.state.countSum
       }
     }
+  }
 </script>
 
 <style scoped>
